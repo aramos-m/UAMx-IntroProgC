@@ -8,8 +8,7 @@ int main() {
 	printf("Introduce una de caracteres: ");
 	fgets(src, DIM, stdin);
 
-	strcpy(dst, src);
-	printf("La cadena de caracteres copiada es: %s", dst);
+	printf("La cadena de caracteres copiada es: %s", strcpy(dst, src));
 
 	printf("El resultado de comparar ambas cadenas es: %d", strcmp(dst, src));
 
