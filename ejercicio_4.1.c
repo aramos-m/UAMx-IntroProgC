@@ -6,10 +6,10 @@ typedef struct {
         char user[DIM], champ[DIM];
         int lvl, xp;
 	double kills, deaths, assists;
-} game;
+} summoner;
 
 int main() {
-        game stats;
+        summoner stats;
 
         printf("¿Cuál es tu nombre de invocador? ");
         scanf("%s", stats.user);
