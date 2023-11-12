@@ -2,11 +2,12 @@
 #include <string.h>
 
 #define DIM 128
+#define DIM_KDA 10
 
 typedef struct {
         char user[DIM], champ[DIM];
         int lvl, xp;
-	double kills, deaths, assists;
+	double kda[DIM_KDA];
 } lol;
 
 int main() {
@@ -21,13 +22,13 @@ int main() {
         printf("¿Con qué campeón has jugado tu última partida? ");
         scanf("%s", game.champ);
         printf("¿Cuántos asesinatos has hecho? ");
-        scanf("%lf", &game.kills);
+        scanf("%lf", &game.kda[0]);
         printf("¿Cuántas veces has muerto? ");
-        scanf("%lf", &game.deaths);
+        scanf("%lf", &game.kda[1]);
         printf("¿Y cuántas asistencias has hecho? ");
-        scanf("%lf", &game.assists);
+        scanf("%lf", &game.kda[2]);
 
-        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", game.user, game.lvl, game.xp, game.champ, (game.kills+game.assists)/game.deaths);
+        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", game.user, game.lvl, game.xp, game.champ, (game.kda[0]+game.kda[2])/game.kda[1]);
 
         return 0;
 }
