@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define DIM 128
 
@@ -7,27 +6,27 @@ typedef struct {
         char user[DIM], champ[DIM];
         int lvl, xp;
 	double kills, deaths, assists;
-} lol;
+} game;
 
 int main() {
-        lol game;
+        game stats;
 
         printf("¿Cuál es tu nombre de invocador? ");
-        scanf("%s", game.user);
+        scanf("%s", stats.user);
         printf("¿Cuál es tu nivel? ");
-        scanf("%d", &game.lvl);
+        scanf("%d", &stats.lvl);
         printf("¿Cuánta experiencia has adquirido ya en dicho nivel? ");
-        scanf("%d", &game.xp);
+        scanf("%d", &stats.xp);
         printf("¿Con qué campeón has jugado tu última partida? ");
-        scanf("%s", game.champ);
+        scanf("%s", stats.champ);
         printf("¿Cuántos asesinatos has hecho? ");
-        scanf("%lf", &game.kills);
+        scanf("%lf", &stats.kills);
         printf("¿Cuántas veces has muerto? ");
-        scanf("%lf", &game.deaths);
+        scanf("%lf", &stats.deaths);
         printf("¿Y cuántas asistencias has hecho? ");
-        scanf("%lf", &game.assists);
+        scanf("%lf", &stats.assists);
 
-        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", game.user, game.lvl, game.xp, game.champ, (game.kills+game.assists)/game.deaths);
+        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", stats.user, stats.lvl, stats.xp, stats.champ, (stats.kills+stats.assists)/stats.deaths);
 
         return 0;
 }
