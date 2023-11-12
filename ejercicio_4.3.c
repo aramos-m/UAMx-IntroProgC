@@ -3,6 +3,7 @@
 
 #define DIM 128
 #define DIM_KDA 10
+
 typedef struct {
 	char champ[DIM];
 	double kda[DIM_KDA];
