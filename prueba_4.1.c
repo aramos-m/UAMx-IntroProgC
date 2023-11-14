@@ -1,44 +1,44 @@
 #include <stdio.h>
 
-#define DIM_TABLA 3
-#define DIM_SUMAS 2
+#define DIMS 3
+#define DIMR 2
 
 typedef struct {
-    int tabla[DIM_TABLA];
+    int numeros[DIMS];
     int suma;
 } Suma;
 
 typedef struct {
-    Suma sumas[DIM_SUMAS];
+    Suma tabla[DIMR];
     int modulo;
 } Resto;
 
 int main() {
-    Resto operacion;
+    Resto x;
     
     printf("Introduce el primer entero de la primera tabla: ");
-    scanf("%d", &operacion.sumas[0].tabla[0]);
+    scanf("%d", &x.tabla[0].numeros[0]);
     printf("Introduce el segundo entero de la primera tabla: ");
-    scanf("%d", &operacion.sumas[0].tabla[1]);
+    scanf("%d", &x.tabla[0].numeros[1]);
     printf("Introduce el tercer entero de la primera tabla: ");
-    scanf("%d", &operacion.sumas[0].tabla[2]);
+    scanf("%d", &x.tabla[0].numeros[2]);
     
-    operacion.sumas[0].suma = operacion.sumas[0].tabla[0]+operacion.sumas[0].tabla[1]+operacion.sumas[0].tabla[2];
+    x.tabla[0].suma = x.tabla[0].numeros[0] + x.tabla[0].numeros[1] + x.tabla[0].numeros[2];
     
     printf("Introduce el primer entero de la segunda tabla: ");
-    scanf("%d", &operacion.sumas[1].tabla[0]);
+    scanf("%d", &x.tabla[1].numeros[0]);
     printf("Introduce el segundo entero de la segunda tabla: ");
-    scanf("%d", &operacion.sumas[1].tabla[1]);
+    scanf("%d", &x.tabla[1].numeros[1]);
     printf("Introduce el tercer entero de la segunda tabla: ");
-    scanf("%d", &operacion.sumas[1].tabla[2]);
+    scanf("%d", &x.tabla[1].numeros[2]);
     
-    operacion.sumas[1].suma = operacion.sumas[1].tabla[0]+operacion.sumas[1].tabla[1]+operacion.sumas[1].tabla[2];
+    x.tabla[1].suma = x.tabla[1].numeros[0] + x.tabla[1].numeros[1] + x.tabla[1].numeros[2];
 
-    operacion.modulo = operacion.sumas[0].suma%operacion.sumas[1].suma;
+    x.modulo = x.tabla[0].suma % x.tabla[1].suma;
     
-    printf("La suma de los elementos de la primera tabla es %d.\n", operacion.sumas[0].suma);
-    printf("La suma de los elementos de la segunda tabla es %d.\n", operacion.sumas[1].suma);
-    printf("El resto de la división de ambas sumas es %d.", operacion.modulo);
+    printf("La suma de los elementos de la primera tabla es %d.\n", x.tabla[0].suma);
+    printf("La suma de los elementos de la segunda tabla es %d.\n", x.tabla[1].suma);
+    printf("El resto de la división de ambas sumas es %d.", x.modulo);
     
     return 0;
 }
