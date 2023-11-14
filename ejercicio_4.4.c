@@ -3,8 +3,8 @@
 #define DIM 128
 
 typedef struct {
-char user[DIM], champ[DIM];
-double kda[3];
+  char user[DIM], champ[DIM];
+  double kda[3];
 } summoner;
 
 int main() {
