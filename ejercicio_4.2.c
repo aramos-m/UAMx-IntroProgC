@@ -1,33 +1,32 @@
 #include <stdio.h>
 
 #define DIM 128
-#define DIM_KDA 10
 
 typedef struct {
         char user[DIM], champ[DIM];
         int lvl, xp;
-	double kda[DIM_KDA];
+	double kda[3];
 } summoner;
 
 int main() {
-        summoner stats;
+        summoner player;
 
         printf("¿Cuál es tu nombre de invocador? ");
-        scanf("%s", stats.user);
+        scanf("%s", player.user);
         printf("¿Cuál es tu nivel? ");
-        scanf("%d", &stats.lvl);
+        scanf("%d", &player.lvl);
         printf("¿Cuánta experiencia has adquirido ya en dicho nivel? ");
-        scanf("%d", &stats.xp);
+        scanf("%d", &player.xp);
         printf("¿Con qué campeón has jugado tu última partida? ");
-        scanf("%s", stats.champ);
+        scanf("%s", player.champ);
         printf("¿Cuántos asesinatos has hecho? ");
-        scanf("%lf", &stats.kda[0]);
+        scanf("%lf", &player.kda[0]);
         printf("¿Cuántas veces has muerto? ");
-        scanf("%lf", &stats.kda[1]);
+        scanf("%lf", &player.kda[1]);
         printf("¿Y cuántas asistencias has hecho? ");
-        scanf("%lf", &stats.kda[2]);
+        scanf("%lf", &player.kda[2]);
 
-        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", stats.user, stats.lvl, stats.xp, stats.champ, (stats.kda[0]+stats.kda[2])/stats.kda[1]);
+        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", player.user, player.lvl, player.xp, player.champ, (player.kda[0]+player.kda[2])/player.kda[1]);
 
         return 0;
 }
