@@ -9,24 +9,24 @@ typedef struct {
 } summoner;
 
 int main() {
-        summoner stats;
+        summoner player;
 
         printf("¿Cuál es tu nombre de invocador? ");
-        scanf("%s", stats.user);
+        scanf("%s", player.user);
         printf("¿Cuál es tu nivel? ");
-        scanf("%d", &stats.lvl);
+        scanf("%d", &player.lvl);
         printf("¿Cuánta experiencia has adquirido ya en dicho nivel? ");
-        scanf("%d", &stats.xp);
+        scanf("%d", &player.xp);
         printf("¿Con qué campeón has jugado tu última partida? ");
-        scanf("%s", stats.champ);
+        scanf("%s", player.champ);
         printf("¿Cuántos asesinatos has hecho? ");
-        scanf("%lf", &stats.kills);
+        scanf("%lf", &player.kills);
         printf("¿Cuántas veces has muerto? ");
-        scanf("%lf", &stats.deaths);
+        scanf("%lf", &player.deaths);
         printf("¿Y cuántas asistencias has hecho? ");
-        scanf("%lf", &stats.assists);
+        scanf("%lf", &player.assists);
 
-        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", stats.user, stats.lvl, stats.xp, stats.champ, (stats.kills+stats.assists)/stats.deaths);
+        printf("%s, de nivel %d y experiencia %d, tu KDA ratio con %s ha sido %.2lf.", player.user, player.lvl, player.xp, player.champ, (player.kills+player.assists)/player.deaths);
 
         return 0;
 }
