@@ -13,5 +13,4 @@ int main(){
 	else if (age >= 18 && age % 3 != 0)
 		printf("Eres mayor de edad y tu edad no es múltiplo de tres");
 	return 0;
-#Hola que tal
 }
