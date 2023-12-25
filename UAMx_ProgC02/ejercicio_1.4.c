@@ -13,11 +13,11 @@ int main(){
 	if (len > 0 && month[len - 1] == '\n')
 		month[len - 1] = '\0';
 
-	if (strcmp(month, "enero")==0 || strcmp(month, "marzo")==0 || strcmp(month, "mayo")==0 || strcmp (month, "julio")==0 || strcmp (month, "agosto")==0 || strcmp(month, "octubre")==0 || strcmp(month, "diciembre")==0)
+	if (!strcmp(month, "enero") || !strcmp(month, "marzo") || !strcmp(month, "mayo") || !strcmp (month, "julio") || !strcmp (month, "agosto") || !strcmp(month, "octubre") || !strcmp(month, "diciembre"))
 		printf("%s tiene 31 días\n", month);
-	else if (strcmp(month, "abril")==0 || strcmp(month, "junio")==0 || strcmp(month, "septiembre")==0 || strcmp(month, "noviembre")==0)
+	else if (!strcmp(month, "abril") || !strcmp(month, "junio") || !strcmp(month, "septiembre") || !strcmp(month, "noviembre"))
 		printf("%s tiene 30 días\n", month);
-	else if (strcmp(month, "febrero")==0)
+	else if (!strcmp(month, "febrero"))
 		printf("%s tiene 28/29 días\n", month);
 	else
 		printf("Incorrect month name\n");
