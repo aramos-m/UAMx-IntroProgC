@@ -14,7 +14,7 @@ int main(){
 		month[len - 1] = '\0';
 
 	if (!strcmp(month, "febrero"))
-		printf("%s tiene 27/29 días\n", month);
+		printf("%s tiene 28/29 días\n", month);
 	else if (!strcmp(month, "abril") || !strcmp(month, "junio") || !strcmp(month, "septiembre") || !strcmp(month, "noviembre"))
 		printf("%s tiene 30 días\n", month);
 	else if (!strcmp(month, "enero") || !strcmp(month, "marzo") || !strcmp(month, "mayo") || !strcmp (month, "julio") || !strcmp (month, "agosto") || !strcmp(month, "octubre") || !strcmp(month, "diciembre"))
