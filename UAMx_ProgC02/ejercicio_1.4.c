@@ -2,10 +2,10 @@
 #include <string.h>
 
 int main(){
-	char month[100];
+	char month[20];
 
 	printf("Introduce el nombre de un mes: ");
-	scanf("%s", month);
+	fgets(month, 11, stdin);
 
 	if (strcmp(month, "enero") == 0 || strcmp(month, "marzo") == 0 || strcmp(month, "mayo") == 0 || strcmp (month, "julio") == 0 || strcmp (month, "agosto") == 0 || strcmp(month, "octubre") == 0 || strcmp(month, "diciembre") == 0)
 		printf("%s tiene 30 días\n", month);
