@@ -18,8 +18,10 @@ int main() {
 		    printf("Entrada no válida para la primera fecha\n");
 	    else if (fecha1.mes == 4, 6, 9, 11 && !(fecha1.dia >= 1 && fecha1.dia <= 30))
 		    printf("Entrada no válida para la primera fecha\n");
-    return 1;
     }
+    else
+	    printf("Entrada no válida para la primera fecha\n");
+    return 1;
 
     printf("Introduce otro día, mes y año separados por espacios: ");
     scanf("%d %d %d", &fecha2.dia, &fecha2.mes, &fecha2.anyo);
@@ -30,8 +32,10 @@ int main() {
 		    printf("Entrada no válida para la primera fecha\n");
 	    else if (fecha2.mes == 4, 6, 9, 11 && !(fecha2.dia >= 1 && fecha2.dia <= 30))
 		    printf("Entrada no válida para la primera fecha\n");
-    return 1;
     }
+    else
+	    printf("Entrada no válida para la primera fecha\n");
+    return 1;
 
     if (fecha1.anyo < fecha2.anyo)
         printf("La fecha %d/%d/%d es anterior a %d/%d/%d", fecha1.dia, fecha1.mes, fecha1.anyo, fecha2.dia, fecha2.mes, fecha2.anyo);
