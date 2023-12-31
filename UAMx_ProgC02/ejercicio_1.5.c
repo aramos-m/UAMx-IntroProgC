@@ -40,7 +40,5 @@ int main() {
             else
                 printf("Las dos fechas son iguales");
         }
-    }
-
     return 0;
 }
