@@ -14,22 +14,22 @@ int main() {
 
 	printf("Selecciona una opción:\n 1. Dólar\n 2. Yen japonés \n 3. Libra esterlina\n");
 	scanf("%d", &option);
+	
+	if (option < 1 || option > 3) {
+		printf("Incorrect option. Please, select 1, 2 or 3.\n");
+		return 1;
+	}
 
 	switch (option) {
 		case 1:
-			if (option == 1)
-				printf("%.2f euros son %.2f dólares.\n", euro, euro * USD_PER_EUR);
+			printf("%.2f euros son %.2f dólares.\n", euro, euro * USD_PER_EUR);
 			break;
-		case 2:
-			if (option == 2)
-				printf("%.2f euros son %.2f yenes.\n", euro, euro * JPY_PER_EUR);
+		case 2:				
+			printf("%.2f euros son %.2f yenes.\n", euro, euro * JPY_PER_EUR);
 			break;
 		case 3:
-			if (option == 3)
-				printf("%.2f euros son %.2f libras.\n", euro, euro * GBP_PER_EUR);
+			printf("%.2f euros son %.2f libras.\n", euro, euro * GBP_PER_EUR);
 			break;
-		default:
-			printf("Incorrect option.");
 	}
 	
 	return 0;
