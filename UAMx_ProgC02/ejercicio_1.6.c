@@ -14,7 +14,7 @@ int main() {
 	scanf("%f", &euro);
 
 	printf("Selecciona una opción:\n 1. Dólar\n 2. Yen japonés\n 3. Libra esterlina\n");
-	scanf(" %s", &option);
+	scanf("\n%s", &option);
 	
 
 	if (!(option[0] > '0' && option[0] < '4' && option[1] == '\0')) {
