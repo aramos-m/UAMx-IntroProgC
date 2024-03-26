@@ -15,7 +15,7 @@ int main() {
 	scanf("%f", &euro);
 
 	if (euro < FLT_MIN || euro > FLT_MAX)
-		printf("Invalid input. Amount outside allowed limits.\n");
+		printf("Invalid input.\n");
 	return 1;
 
 	printf("Selecciona una opción:\n (D)ólar\n (Y)en japonés\n (L)ibra esterlina\n");
