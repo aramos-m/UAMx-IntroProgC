@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <float.h>
 
 //EXCHANGE TO DATE 24 MARCH 2024
 #define USD_PER_EUR 1.09
@@ -12,6 +13,10 @@ int main() {
 
 	printf("Introduce una cantidad en euros: ");
 	scanf("%f", &euro);
+
+	if (euro < FLT_MIN || euro > FLT_MAX)
+		printf("Invalid input. Amount outside allowed limits.\n");
+	return 1;
 
 	printf("Selecciona una opción:\n (D)ólar\n (Y)en japonés\n (L)ibra esterlina\n");
 	scanf("\n%s", &option);
@@ -34,6 +39,6 @@ int main() {
 		return 0;
 	}
 	else
-		printf("Incorrect option. Please, select D/d, Y/y or L/l.\n");
+		printf("Invalid input. Select D/d, Y/y or L/l.\n");
 	return 1;
 }
