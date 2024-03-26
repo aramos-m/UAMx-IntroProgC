@@ -14,9 +14,10 @@ int main() {
 	printf("Introduce una cantidad en euros: ");
 	scanf("%f", &euro);
 
-	if (euro < FLT_MIN || euro > FLT_MAX)
+	if (euro < FLT_MIN || euro > FLT_MAX) {
 		printf("Invalid input.\n");
-	return 1;
+		return 1;
+	}
 
 	printf("Selecciona una opción:\n (D)ólar\n (Y)en japonés\n (L)ibra esterlina\n");
 	scanf("\n%s", &option);
