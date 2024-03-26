@@ -14,33 +14,27 @@ int main() {
 	scanf("%f", &euro);
 
 	printf("Selecciona una opción:\n (D)ólar\n (Y)en japonés\n (L)ibra esterlina\n");
-	scanf(" %s", &option);
-	printf("%s\n", option);
+	scanf("\n%s", &option);
 
-	if (!(option[1] == '\0')) {
+	if (!(option[1] == '\0'))
 		printf("Incorrect option. Please, select D/d, Y/y or L/l.\n");
-		return 1;
-	}
+	return 1;
 
 	switch (option[0]) {
 		case 'D':
 		case 'd':
 			printf("%.2f euros son %.2f dólares.\n", euro, euro * USD_PER_EUR);
-		break;
-
+			break;
 		case 'Y':
 		case 'y':			
 			printf("%.2f euros son %.2f yenes.\n", euro, euro * JPY_PER_EUR);
-		break;
-
+			break;
 		case 'L':
 		case 'l':
 			printf("%.2f euros son %.2f libras.\n", euro, euro * GBP_PER_EUR);
-		break;
-
+			break;
 		default:
 			printf("Incorrect option. Please, select D/d, Y/y or L/l.\n");
 	}
-	
 	return 0;
 }
