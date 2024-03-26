@@ -16,7 +16,6 @@ int main() {
 	printf("Selecciona una opción:\n 1. Dólar\n 2. Yen japonés\n 3. Libra esterlina\n");
 	scanf("\n%s", &option);
 	
-
 	if (!(option[0] > '0' && option[0] < '4' && option[1] == '\0')) {
 	       printf("Incorrect option. Please, select 1, 2 or 3.\n");
 		return 1;
