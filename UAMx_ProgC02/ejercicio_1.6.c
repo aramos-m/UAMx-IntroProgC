@@ -17,7 +17,7 @@ int main() {
 	scanf(" %s", &option);
 	
 
-	if (!(option[0] > 48 && option[0] < 52 && option[1] == '\0')) {
+	if (!(option[0] > '0' && option[0] < '4' && option[1] == '\0')) {
 	       printf("Incorrect option. Please, select 1, 2 or 3.\n");
 		return 1;
 	}
