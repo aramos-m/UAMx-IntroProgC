@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 typedef struct {
-	int	dia;
-	int	mes;
-	int	anyo;
+	int dia;
+	int mes;
+	int anyo;
 } Fecha;
 
 int is_valid_date(Fecha date) {
