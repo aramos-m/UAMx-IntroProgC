@@ -9,6 +9,7 @@ typedef struct {
 int is_valid_date(Fecha date) {
 	if (date.mes < 1 && date.mes > 12)
 		return 0;
+	
 	if (date.mes == 4 || date.mes == 6 || date.mes == 9 || date.mes == 11)
 		return (date.dia >= 1 && date.dia <= 30);
 	else if (date.mes == 2) {
@@ -24,7 +25,7 @@ int main() {
     Fecha fecha1, fecha2;
 
     printf("Introduce un día, mes y año separados por espacios: ");
-    scanf("%d %d %d", &fecha1.dia, &fecha1.mes, &fecha1.anyo);
+    scanf("%2d %2d %d", &fecha1.dia, &fecha1.mes, &fecha1.anyo);
 
     if (!is_valid_date(fecha1)) {
 	    printf("Invalid input.\n");
@@ -32,7 +33,7 @@ int main() {
     }
 
     printf("Introduce otro día, mes y año separados por espacios: ");
-    scanf("%d %d %d", &fecha2.dia, &fecha2.mes, &fecha2.anyo);
+    scanf("%2d %2d %d", &fecha2.dia, &fecha2.mes, &fecha2.anyo);
 
     if (!is_valid_date(fecha2)) {
 	    printf("Invalid input.\n");
