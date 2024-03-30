@@ -33,6 +33,5 @@ int main() {
 		printf("El número %lld es el menor\n", sort.num2);
 	else
 		printf("El número %lld es el menor", sort.num3);
-
 	return 0;
 }
