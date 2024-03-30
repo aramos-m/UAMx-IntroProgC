@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <float.h>
 
 //EXCHANGE TO DATE 24 MARCH 2024
 #define USD_PER_EUR 1.09
@@ -8,13 +7,11 @@
 #define DIM 100
 
 int main() {
-	float euro;
+	double euro;
 	char option[DIM];
 
 	printf("Introduce una cantidad en euros: ");
-	scanf("%f", &euro);
-
-	if (euro < FLT_MIN || euro > FLT_MAX) {
+	if (scanf("%lf", &euro) != 1) {
 		printf("Invalid input.\n");
 		return 1;
 	}
@@ -26,15 +23,15 @@ int main() {
 		switch (option[0]) {
 			case 'D':
 			case 'd':
-				printf("%.2f euros son %.2f dólares.\n", euro, euro * USD_PER_EUR);
+				printf("%.2lf euros son %.2lf dólares.\n", euro, euro * USD_PER_EUR);
 				break;
 			case 'Y':
 			case 'y':			
-				printf("%.2f euros son %.2f yenes.\n", euro, euro * JPY_PER_EUR);
+				printf("%.2lf euros son %.2lf yenes.\n", euro, euro * JPY_PER_EUR);
 				break;
 			case 'L':
 			case 'l':
-				printf("%.2f euros son %.2f libras.\n", euro, euro * GBP_PER_EUR);
+				printf("%.2lf euros son %.2lf libras.\n", euro, euro * GBP_PER_EUR);
 				break;
 		}
 		return 0;
