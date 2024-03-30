@@ -1,20 +1,14 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-
-#define DIM 100
 
 typedef struct {
-	char num_str1[DIM];
-	char num_str2[DIM];
-	char num_str3[DIM];
+	char num_str1[100];
+	char num_str2[100];
+	char num_str3[100];
 } Numbers;
 
 int is_valid_num(const char *str) {
-    if (strlen(str) >= DIM)
-        return 0;
-
     int i = 0;
     while (str[i] != '\0') {
         if (!isdigit(str[i])) {
@@ -29,7 +23,7 @@ int main() {
 	Numbers sort;
 
 	printf("Introduce el primer número: ");
-	scanf("%s", &sort.num_str1);
+	scanf("%99s", sort.num_str1);
 
 	if (!is_valid_num(sort.num_str1)) {
 		printf("Invalid input.\n");
@@ -37,7 +31,7 @@ int main() {
 	}
 
 	printf("Introduce el segundo número: ");
-	scanf("%s", &sort.num_str2);
+	scanf("%99s", sort.num_str2);
 	
 	if (!is_valid_num(sort.num_str2)) {
 		printf("Invalid input.\n");
@@ -45,7 +39,7 @@ int main() {
 	}
 
 	printf("Introduce el tercer número: ");
-	scanf("%s", &sort.num_str3);
+	scanf("%99s", sort.num_str3);
 
 	if (!is_valid_num(sort.num_str3)) {
 		printf("Invalid input.\n");
